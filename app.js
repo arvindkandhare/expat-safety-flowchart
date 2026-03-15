@@ -185,8 +185,27 @@ function SvgEdge({ edge, pos }) {
 }
 
 // ─── CHECKLIST DRAWER ───────────────────────────────────────────────────────
-function Drawer({ node, onClose, col }) {
-  const [checked, setChecked] = useState({});
+function Drawer({ node, onClose, col, scenarioId, level }) {
+  const storageKey = `checklist-${scenarioId}-${level}-${node.id}`;
+  const [checked, setChecked] = useState(() => {
+    // Load from localStorage on mount
+    try {
+      const saved = localStorage.getItem(storageKey);
+      return saved ? JSON.parse(saved) : {};
+    } catch (e) {
+      return {};
+    }
+  });
+  
+  // Save to localStorage whenever checked state changes
+  useEffect(() => {
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(checked));
+    } catch (e) {
+      // Ignore localStorage errors (e.g., quota exceeded, private browsing)
+    }
+  }, [checked, storageKey]);
+  
   if (!node || !node.checklist) return null;
   const done = Object.values(checked).filter(Boolean).length;
   const total = node.checklist.length;
@@ -232,8 +251,24 @@ function Drawer({ node, onClose, col }) {
         })
       ),
       React.createElement("div", {
-        style: { color: "#555", fontSize: 12, marginTop: 4 }
-      }, `${done} / ${total} complete`)
+        style: { display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 4 }
+      },
+        React.createElement("div", {
+          style: { color: "#555", fontSize: 12 }
+        }, `${done} / ${total} complete`),
+        done > 0 && React.createElement("button", {
+          onClick: () => {
+            if (confirm("Clear all progress for this checklist?")) {
+              setChecked({});
+            }
+          },
+          style: {
+            background: "none", border: "none", color: "#666",
+            cursor: "pointer", fontSize: 10, textDecoration: "underline",
+            padding: "0"
+          }
+        }, "clear")
+      )
     ),
     // Items
     React.createElement("div", {
@@ -274,7 +309,7 @@ function Drawer({ node, onClose, col }) {
 }
 
 // ─── FLOW DIAGRAM ───────────────────────────────────────────────────────────
-function FlowDiagram({ levelData }) {
+function FlowDiagram({ levelData, scenarioId, level }) {
   const [sel, setSel] = useState(null);
   const { nodes, edges } = levelData.flow;
   const col = levelData.color;
@@ -310,7 +345,7 @@ function FlowDiagram({ levelData }) {
       )
     ),
     sel && sel.checklist && React.createElement(Drawer, {
-      node: sel, onClose: () => setSel(null), col
+      node: sel, onClose: () => setSel(null), col, scenarioId, level
     })
   );
 }
@@ -688,7 +723,9 @@ function App() {
     error && React.createElement(ErrorState, { message: error }),
     !loading && !error && levelData && React.createElement(FlowDiagram, {
       key: `${scenarioId}-${activeLevel}`,
-      levelData
+      levelData,
+      scenarioId,
+      level: activeLevel
     }),
 
     // About modal
