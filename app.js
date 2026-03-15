@@ -316,7 +316,7 @@ function FlowDiagram({ levelData, scenarioId, level }) {
   const { pos, svgW, svgH, offX } = useMemo(() => layoutFlow(nodes, edges), [levelData.level, levelData.label]);
 
   return React.createElement("div", {
-    style: { display: "flex", height: "100%", overflow: "hidden" }
+    style: { display: "flex", minHeight: "70vh", overflow: "hidden" }
   },
     React.createElement("div", {
       style: { flex: 1, overflow: "auto", padding: "8px 0" }
@@ -571,9 +571,8 @@ function App() {
 
   return React.createElement("div", {
     style: {
-      background: "#080808", height: "100%", display: "flex",
-      flexDirection: "column", fontFamily: "'DM Mono','Courier New',monospace",
-      overflow: "hidden"
+      background: "#080808", minHeight: "100vh", display: "flex",
+      flexDirection: "column", fontFamily: "'DM Mono','Courier New',monospace"
     }
   },
     // Header
