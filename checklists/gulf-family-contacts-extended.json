@@ -1,0 +1,13 @@
+{
+  "id": "gulf-family-contacts-extended",
+  "title": "Share Details with Family",
+  "description": "Extended contact information specific to Gulf scenarios including MADAD registration.",
+  "tags": ["gulf", "family", "communication"],
+  "items": [
+    "Your home address in the Gulf",
+    "Your work address and employer name",
+    "Your local phone number",
+    "Nearest Indian Embassy address and 24x7 number",
+    "Your MADAD registration number"
+  ]
+}

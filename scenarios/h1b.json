@@ -1,0 +1,402 @@
+{
+  "id": "h1b",
+  "label": "H1B / US Visa Crisis",
+  "subtitle": "Indian nationals facing visa status threat in the United States",
+  "currentLevel": 2,
+  "disclaimer": "Informational resource only. NOT legal advice. Consult a licensed US immigration attorney for your specific situation. Laws and policies change rapidly - verify everything independently.",
+  "levels": [
+    {
+      "level": 1,
+      "color": "#1e5c1e",
+      "textColor": "#a8f0a8",
+      "label": "GREEN",
+      "name": "Normal",
+      "description": "Visa valid, employment stable, no active policy threat.",
+      "officialTrigger": "No USCIS policy changes announced. Employer in good standing. Visa validity 18+ months.",
+      "observableTrigger": "Workplace normal. No RFE received. No significant visa-related news in your category.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "GREEN\nNormal Status"
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "GREEN PREP\nCOMPLETE"
+          },
+          {
+            "id": "a1",
+            "type": "action",
+            "label": "Baseline prep\ndo this now",
+            "checklistId": "h1b-baseline-prep"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "a1"
+          },
+          {
+            "from": "a1",
+            "to": "e1"
+          }
+        ]
+      }
+    },
+    {
+      "level": 2,
+      "color": "#6b5900",
+      "textColor": "#ffe87a",
+      "label": "YELLOW",
+      "name": "Watch",
+      "description": "Policy uncertainty elevated. No direct threat yet. Time to prepare - use it.",
+      "officialTrigger": "USCIS announces policy review affecting H1B. Executive orders signed. Increased RFE rates reported industry-wide.",
+      "observableTrigger": "Layoffs in your sector. Colleagues receiving RFEs or denials. Immigration attorneys reporting increased caseloads.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "YELLOW\nWatch Status"
+          },
+          {
+            "id": "q1",
+            "type": "decision",
+            "label": "Attorney\nconsulted?"
+          },
+          {
+            "id": "q2",
+            "type": "decision",
+            "label": "I-140 status\nand options\nunderstood?"
+          },
+          {
+            "id": "q3",
+            "type": "decision",
+            "label": "6 months\nsavings\naccessible?"
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "YELLOW PREP\nCOMPLETE\nMonitor weekly"
+          },
+          {
+            "id": "a1",
+            "type": "action",
+            "label": "Retain attorney\nnow",
+            "checklistId": "h1b-attorney-retention"
+          },
+          {
+            "id": "a2",
+            "type": "action",
+            "label": "Know your\noptions cold",
+            "checklistId": "h1b-i140-options"
+          },
+          {
+            "id": "a3",
+            "type": "action",
+            "label": "Financial\npreparation",
+            "checklistId": "h1b-financial-prep"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "q1"
+          },
+          {
+            "from": "q1",
+            "to": "q2",
+            "label": "YES"
+          },
+          {
+            "from": "q1",
+            "to": "a1",
+            "label": "NO"
+          },
+          {
+            "from": "a1",
+            "to": "q2"
+          },
+          {
+            "from": "q2",
+            "to": "q3",
+            "label": "YES"
+          },
+          {
+            "from": "q2",
+            "to": "a2",
+            "label": "NO"
+          },
+          {
+            "from": "a2",
+            "to": "q3"
+          },
+          {
+            "from": "q3",
+            "to": "e1",
+            "label": "YES"
+          },
+          {
+            "from": "q3",
+            "to": "a3",
+            "label": "NO"
+          },
+          {
+            "from": "a3",
+            "to": "e1"
+          }
+        ]
+      }
+    },
+    {
+      "level": 3,
+      "color": "#7a3200",
+      "textColor": "#ffbb80",
+      "label": "ORANGE",
+      "name": "Advisory",
+      "description": "Direct threat to your status. RFE received, layoff notice, or policy change directly affecting you.",
+      "officialTrigger": "RFE received. Layoff notice with visa implications. USCIS denial of extension filed.",
+      "observableTrigger": "HR discussing visa sponsorship limits. Project cancelled. Team downsizing announced.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "ORANGE\nAdvisory Status"
+          },
+          {
+            "id": "q1",
+            "type": "decision",
+            "label": "Attorney\nretained?"
+          },
+          {
+            "id": "q2",
+            "type": "decision",
+            "label": "60-day grace\nperiod clock\nunderstood?"
+          },
+          {
+            "id": "q3",
+            "type": "decision",
+            "label": "New sponsor\nor status path\nidentified?"
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "MANAGING\nStay on attorney\ntimeline strictly"
+          },
+          {
+            "id": "a1",
+            "type": "action",
+            "label": "Retain attorney\nimmediately",
+            "checklist": [
+              "Do not respond to any USCIS notice without attorney review - ever",
+              "File RFE response strictly within deadline - no extensions exist",
+              "Explore in parallel: change of status, transfer to new employer, COS to F-1"
+            ]
+          },
+          {
+            "id": "a2",
+            "type": "action",
+            "label": "60-day clock\nmanagement",
+            "checklist": [
+              "H1B holders have exactly 60 days after layoff before status lapses",
+              "Do NOT accrue unlawful presence - consequences are a 3 or 10 year bar on re-entry",
+              "Options within 60 days: new H1B sponsor, change to O-1, H4, F-1, or voluntary departure",
+              "Attorney should map your specific timeline on day one"
+            ]
+          },
+          {
+            "id": "a3",
+            "type": "action",
+            "label": "Parallel path\npreparation",
+            "checklist": [
+              "Begin job search immediately - do not wait for RFE outcome",
+              "Identify O-1 eligibility: extraordinary ability track, different from H1B",
+              "If spouse has H1B: explore H4 EAD path",
+              "Begin India-side preparation in parallel: update resume, reconnect with India contacts"
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "q1"
+          },
+          {
+            "from": "q1",
+            "to": "q2",
+            "label": "YES"
+          },
+          {
+            "from": "q1",
+            "to": "a1",
+            "label": "NO"
+          },
+          {
+            "from": "a1",
+            "to": "q2"
+          },
+          {
+            "from": "q2",
+            "to": "q3",
+            "label": "YES"
+          },
+          {
+            "from": "q2",
+            "to": "a2",
+            "label": "NO"
+          },
+          {
+            "from": "a2",
+            "to": "q3"
+          },
+          {
+            "from": "q3",
+            "to": "e1",
+            "label": "YES"
+          },
+          {
+            "from": "q3",
+            "to": "a3",
+            "label": "NO"
+          },
+          {
+            "from": "a3",
+            "to": "e1"
+          }
+        ]
+      }
+    },
+    {
+      "level": 4,
+      "color": "#7a0000",
+      "textColor": "#ff9999",
+      "label": "RED",
+      "name": "Warning",
+      "description": "Status lapsing or lapsed. Departure timeline active. No viable status path remaining.",
+      "officialTrigger": "USCIS denial final. Status expired. Attorney confirms no further remedies.",
+      "observableTrigger": "Out of status. Employer cannot or will not sponsor. No transfer candidate.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "RED\nWarning Status"
+          },
+          {
+            "id": "q1",
+            "type": "decision",
+            "label": "Any legal\nremedy\nstill viable?"
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "LEGAL PROCESS\nFollow attorney\ntimeline strictly"
+          },
+          {
+            "id": "e2",
+            "type": "end",
+            "label": "DEPARTING\nVoluntary departure\nis far better\nthan removal order"
+          },
+          {
+            "id": "a1",
+            "type": "action",
+            "label": "Last legal\noptions",
+            "checklist": [
+              "Appeal USCIS denial - strict deadlines, attorney required",
+              "Motion to reopen or reconsider - narrow grounds but worth assessing",
+              "Consular processing from India - may allow re-entry on approved petition",
+              "Emergency stay of removal if applicable - attorney only"
+            ]
+          },
+          {
+            "id": "a2",
+            "type": "action",
+            "label": "Voluntary departure\npreparation",
+            "checklist": [
+              "Voluntary departure avoids the 3-year or 10-year re-entry bar that a removal order triggers",
+              "Settle US accounts: close or transfer credit cards, redirect mail, notify IRS of address change",
+              "Roll 401k to IRA to avoid forced withdrawal and penalties - do not just cash out",
+              "Wire savings to India: daily wire limits apply, plan over several days",
+              "Contact Indian Consulate for any re-entry documentation needed",
+              "Do not leave without informing your attorney - even voluntary departure has a process"
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "q1"
+          },
+          {
+            "from": "q1",
+            "to": "a1",
+            "label": "POSSIBLY"
+          },
+          {
+            "from": "q1",
+            "to": "a2",
+            "label": "NO"
+          },
+          {
+            "from": "a1",
+            "to": "e1"
+          },
+          {
+            "from": "a2",
+            "to": "e2"
+          }
+        ]
+      }
+    },
+    {
+      "level": 5,
+      "color": "#1a1a1a",
+      "textColor": "#aaaaaa",
+      "label": "BLACK",
+      "name": "Emergency",
+      "description": "Removal proceedings active. Enforcement contact made. Immediate legal and personal crisis.",
+      "officialTrigger": "Removal order issued. Notice to Appear. ICE contact or detention.",
+      "observableTrigger": "Enforcement officers present. Employer received inquiry about your status.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "BLACK\nEmergency"
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "WITH ATTORNEY\nDo not act\nwithout counsel\nunder any\ncircumstance"
+          },
+          {
+            "id": "a1",
+            "type": "action",
+            "label": "Immediate steps\nin this order only",
+            "checklist": [
+              "Do not speak to enforcement officers without an attorney present - this is a legal right, exercise it",
+              "You have the right to remain silent. State clearly: I wish to speak to an attorney.",
+              "You have the right to consular access. State: I am an Indian citizen and request consular notification.",
+              "Call your immigration attorney immediately - this is the one call you make first",
+              "Contact Indian Consulate: they can provide consular access during detention and contact your family",
+              "Do not sign any documents without attorney review - ever, under any pressure"
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "a1"
+          },
+          {
+            "from": "a1",
+            "to": "e1"
+          }
+        ]
+      }
+    }
+  ]
+}

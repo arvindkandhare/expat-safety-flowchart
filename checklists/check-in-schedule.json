@@ -1,0 +1,13 @@
+{
+  "id": "check-in-schedule",
+  "title": "Setup Check-In Schedule",
+  "description": "Regular check-ins become critical during a crisis. Establish them now while things are calm.",
+  "tags": ["communication", "family", "routine"],
+  "items": [
+    "Agree on check-in frequency: daily vs weekly depending on situation",
+    "Primary method: WhatsApp, Signal, or regular phone?",
+    "Backup method if primary fails",
+    "Define what 'missed check-in' means and what family should do",
+    "Test your backup communication method once"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "gulf-go-bag-locate",
+  "title": "Locate Go-Bag Items (Don't Pack Yet)",
+  "description": "In Green status, just know where critical items are. Don't pack yet - that signals Yellow/Orange.",
+  "tags": ["gulf", "emergency", "preparation"],
+  "items": [
+    "Know where your passport is - every minute counts later",
+    "3 days of essential medication accessible",
+    "Phone charger and power bank",
+    "Local cash equivalent to 1 week expenses",
+    "USD 200 - accepted at most land borders in a crisis",
+    "This is not a packed bag yet - just know where everything is"
+  ]
+}

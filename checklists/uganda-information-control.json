@@ -1,0 +1,21 @@
+{
+  "id": "uganda-information-control",
+  "title": "Uganda Information Security (DEMO - Historical)",
+  "description": "Operational security during authoritarian surveillance. State Research Bureau infiltrated communities. Informants were everywhere.",
+  "tags": ["uganda", "demo", "historical", "security", "surveillance"],
+  "items": [
+    "Assume all phone calls are monitored - State Research Bureau had extensive wiretap capabilities",
+    "Do not discuss plans in public spaces - restaurants, shops, buses all had informants",
+    "Avoid political discussions entirely - criticism of Amin or military could result in arrest, torture, or death",
+    "Letters and mail were opened - do not write anything sensitive. Use coded language if necessary.",
+    "Trust only immediate family - and even then, compartmentalize information. What they don't know can't be extracted.",
+    "Burn or destroy sensitive documents before leaving - anything left behind could be used against remaining community members",
+    "Do not announce departure date publicly - made you vulnerable to robbery, extortion, or detention",
+    "Servants and employees could be informants - even long-trusted staff faced pressure to report on employers",
+    "Radio Uganda was propaganda - only official source of news and completely unreliable",
+    "BBC World Service - listened to secretly after dark. Provided real information about situation in Uganda.",
+    "Community gatherings monitored - temples, mosques, and religious events were infiltrated by security forces",
+    "Photography was dangerous - cameras were confiscated, film destroyed. Being photographed could mark you as target.",
+    "Foreign journalists were expelled or arrested - independent reporting was eliminated by 1973"
+  ]
+}

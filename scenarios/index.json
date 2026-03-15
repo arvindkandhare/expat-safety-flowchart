@@ -1,0 +1,23 @@
+[
+  {
+    "id": "gulf",
+    "file": "gulf.json",
+    "label": "Gulf Regional Conflict",
+    "subtitle": "Indian nationals in UAE / Saudi Arabia / Kuwait / Qatar / Oman / Bahrain",
+    "currentLevel": 2
+  },
+  {
+    "id": "h1b",
+    "file": "h1b.json",
+    "label": "H1B / US Visa Crisis",
+    "subtitle": "Indian nationals facing visa status threat in the United States",
+    "currentLevel": 2
+  },
+  {
+    "id": "uganda-1972",
+    "file": "uganda-1972.json",
+    "label": "Uganda 1972 Expulsion (DEMO)",
+    "subtitle": "Historical case study: Asian Ugandans - 90-day forced expulsion",
+    "currentLevel": 3
+  }
+]

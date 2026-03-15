@@ -1,0 +1,498 @@
+{
+  "id": "uganda-1972",
+  "label": "Uganda 1972 Asian Expulsion (DEMO)",
+  "subtitle": "Historical case study: Asian Ugandans during Idi Amin regime - 90-day forced expulsion",
+  "currentLevel": 3,
+  "disclaimer": "HISTORICAL DEMONSTRATION ONLY. Based on documented events from August-November 1972 when ~80,000 Asian Ugandans were expelled. This is NOT current guidance for Uganda. Educational resource showing what crisis preparedness looks like under authoritarian expulsion.",
+  "levels": [
+    {
+      "level": 1,
+      "color": "#1e5c1e",
+      "textColor": "#a8f0a8",
+      "label": "GREEN",
+      "name": "Pre-Crisis (1971 early)",
+      "description": "Amin takes power in coup. Situation tense but business continues. Asian community cautiously optimistic.",
+      "officialTrigger": "January 1971 coup. Obote overthrown. Initial promises of stability and reconciliation.",
+      "observableTrigger": "Military visible but not openly hostile. Businesses operating. Some political arrests but not targeting Asian community yet. Expatriates beginning quiet departures.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "GREEN\nPre-Crisis 1971"
+          },
+          {
+            "id": "q1",
+            "type": "decision",
+            "label": "Citizenship\nstatus clear?"
+          },
+          {
+            "id": "q2",
+            "type": "decision",
+            "label": "Passports valid\nfor all family?"
+          },
+          {
+            "id": "q3",
+            "type": "decision",
+            "label": "Assets\ndocumented?"
+          },
+          {
+            "id": "q4",
+            "type": "decision",
+            "label": "Foreign contacts\nestablished?"
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "GREEN COMPLETE\nMonitor situation"
+          },
+          {
+            "id": "a1",
+            "type": "action",
+            "label": "Clarify citizenship\nimmediately",
+            "checklist": [
+              "British passport holders - majority had UK passports but never lived in UK",
+              "Ugandan citizenship - some had taken it but legal status unclear under new regime",
+              "Indian/Pakistani passports - some retained despite living in Uganda for generations",
+              "Stateless risk - some families had no clear citizenship anywhere",
+              "Register with appropriate High Commission - UK, India, or Pakistan",
+              "Document family's entire immigration history to Uganda"
+            ]
+          },
+          {
+            "id": "a2",
+            "type": "action",
+            "label": "Secure all\ntravel documents",
+            "checklistId": "uganda-document-preparation"
+          },
+          {
+            "id": "a3",
+            "type": "action",
+            "label": "Document all\nassets & property",
+            "checklist": [
+              "Property deeds and titles to all real estate",
+              "Business registration documents and licenses",
+              "Bank account details - all institutions, all family members",
+              "Vehicle registration documents",
+              "Insurance policies",
+              "Stock certificates and investment records",
+              "Safe deposit box inventory",
+              "Photograph valuable items for future claims",
+              "Make copies - keep one set outside Uganda if possible"
+            ]
+          },
+          {
+            "id": "a4",
+            "type": "action",
+            "label": "Build foreign\nnetwork",
+            "checklist": [
+              "Contact family in UK, Canada, India - establish potential landing zones",
+              "Professional contacts in target countries - for job references",
+              "Religious community connections - temples, mosques abroad",
+              "Business partners in other countries",
+              "Update addresses and phone numbers regularly",
+              "Share basic family information with trusted foreign contacts",
+              "Investigate visa requirements for UK, Canada, India NOW"
+            ]
+          }
+        ],
+        "edges": [
+          { "from": "s1", "to": "q1" },
+          { "from": "q1", "to": "q2", "label": "YES" },
+          { "from": "q1", "to": "a1", "label": "NO" },
+          { "from": "a1", "to": "q2" },
+          { "from": "q2", "to": "q3", "label": "YES" },
+          { "from": "q2", "to": "a2", "label": "NO" },
+          { "from": "a2", "to": "q3" },
+          { "from": "q3", "to": "q4", "label": "YES" },
+          { "from": "q3", "to": "a3", "label": "NO" },
+          { "from": "a3", "to": "q4" },
+          { "from": "q4", "to": "e1", "label": "YES" },
+          { "from": "q4", "to": "a4", "label": "NO" },
+          { "from": "a4", "to": "e1" }
+        ]
+      }
+    },
+    {
+      "level": 2,
+      "color": "#6b5900",
+      "textColor": "#ffe87a",
+      "label": "YELLOW",
+      "name": "Increasing Hostility (1971-1972)",
+      "description": "Anti-Asian rhetoric increases. Random harassment and arrests. Some businesses seized 'irregularly'.",
+      "officialTrigger": "Official statements about 'economic saboteurs'. Military checkpoints increase. Asian trade licenses reviewed.",
+      "observableTrigger": "Soldiers demanding bribes more aggressively. Some shops vandalized. Community members disappear temporarily then return traumatized. BBC reporting concerns.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "YELLOW\n1971-1972"
+          },
+          {
+            "id": "q1",
+            "type": "decision",
+            "label": "Can leave\nimmediately?"
+          },
+          {
+            "id": "q2",
+            "type": "decision",
+            "label": "Assets secured\nor liquidated?"
+          },
+          {
+            "id": "q3",
+            "type": "decision",
+            "label": "Family safety\nprotocol active?"
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "LEAVE NOW\nif possible"
+          },
+          {
+            "id": "e2",
+            "type": "end",
+            "label": "YELLOW PREP\nWait for trigger"
+          },
+          {
+            "id": "a1",
+            "type": "action",
+            "label": "Assess barriers\nto departure",
+            "checklist": [
+              "Financial: can you afford to abandon everything and restart?",
+              "Emotional: accepting that you may never return or recover assets",
+              "Family: elderly relatives who cannot travel easily",
+              "Business: contracts, employees, obligations",
+              "Those who left 'early' were criticized. Those who stayed 'too long' lost everything.",
+              "UK began restricting entry even for passport holders. Time mattered.",
+              "India/Pakistan accepting returnees but capacity limited"
+            ]
+          },
+          {
+            "id": "a2",
+            "type": "action",
+            "label": "Begin quiet\nasset moves",
+            "checklistId": "uganda-asset-liquidation"
+          },
+          {
+            "id": "a3",
+            "type": "action",
+            "label": "Implement\nsecurity measures",
+            "checklistId": "uganda-family-safety"
+          },
+          {
+            "id": "a4",
+            "type": "action",
+            "label": "Prepare for\ninformation control",
+            "checklistId": "uganda-information-control"
+          }
+        ],
+        "edges": [
+          { "from": "s1", "to": "q1" },
+          { "from": "q1", "to": "e1", "label": "YES" },
+          { "from": "q1", "to": "q2", "label": "NO" },
+          { "from": "q2", "to": "q3", "label": "YES" },
+          { "from": "q2", "to": "a2", "label": "NO" },
+          { "from": "a2", "to": "q3" },
+          { "from": "q3", "to": "a4", "label": "YES" },
+          { "from": "q3", "to": "a3", "label": "NO" },
+          { "from": "a3", "to": "a4" },
+          { "from": "a4", "to": "e2" },
+          { "from": "q1", "to": "a1", "label": "UNSURE" },
+          { "from": "a1", "to": "q2" }
+        ]
+      }
+    },
+    {
+      "level": 3,
+      "color": "#8b4500",
+      "textColor": "#ffb366",
+      "label": "ORANGE",
+      "name": "Expulsion Announced (Aug 4, 1972)",
+      "description": "Amin announces expulsion: all Asians with British passports must leave in 90 days. Deadline: November 8, 1972.",
+      "officialTrigger": "August 4, 1972 radio announcement. 'God told me in a dream'. Initial deadline: 90 days. Later extended slightly.",
+      "observableTrigger": "Panic in community. Long lines at High Commissions. Businesses being marked for takeover. Property buyers disappear. Airport chaos begins.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "ORANGE\nExpulsion Declared"
+          },
+          {
+            "id": "q1",
+            "type": "decision",
+            "label": "Covered by\nexpulsion order?"
+          },
+          {
+            "id": "q2",
+            "type": "decision",
+            "label": "Destination\ncountry confirmed?"
+          },
+          {
+            "id": "q3",
+            "type": "decision",
+            "label": "Transport\nbooked?"
+          },
+          {
+            "id": "q4",
+            "type": "decision",
+            "label": "Medical prep\ncompleted?"
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "READY TO\nEVACUATE"
+          },
+          {
+            "id": "a1",
+            "type": "action",
+            "label": "Verify your\nstatus urgently",
+            "checklist": [
+              "British passport holders - definitely covered",
+              "Ugandan citizens initially exempted - but this changed unpredictably",
+              "Indian/Pakistani passport holders - initially unclear, later included",
+              "Professional classes targeted first - doctors, lawyers, business owners",
+              "Go to High Commission daily for updates - information changed constantly",
+              "Assumption of safety was deadly - verify your specific situation",
+              "Some Ugandan citizens later stripped of citizenship retroactively"
+            ]
+          },
+          {
+            "id": "a2",
+            "type": "action",
+            "label": "Secure destination\ncountry admission",
+            "checklistId": "uganda-destination-prep"
+          },
+          {
+            "id": "a3",
+            "type": "action",
+            "label": "Book evacuation\ntransport NOW",
+            "checklistId": "uganda-evacuation-routes"
+          },
+          {
+            "id": "a4",
+            "type": "action",
+            "label": "Complete medical\npreparation",
+            "checklistId": "uganda-medical-preparation"
+          },
+          {
+            "id": "a5",
+            "type": "action",
+            "label": "Final asset\nliquidation",
+            "checklist": [
+              "Accept ANY reasonable offer - you have no leverage",
+              "Transfer money through hawala - banks are compromised",
+              "Convert to portable valuables - gold, jewelry, small items",
+              "Some buried money/gold hoping to return - most never recovered",
+              "Sign over businesses under duress - legal fiction but prevented worse",
+              "Do NOT expect fair value - 10-20 cents on dollar was common",
+              "Priority: get family out safely. Everything else is secondary."
+            ]
+          }
+        ],
+        "edges": [
+          { "from": "s1", "to": "q1" },
+          { "from": "q1", "to": "q2", "label": "YES" },
+          { "from": "q1", "to": "a1", "label": "UNCLEAR" },
+          { "from": "a1", "to": "q2" },
+          { "from": "q2", "to": "q3", "label": "YES" },
+          { "from": "q2", "to": "a2", "label": "NO" },
+          { "from": "a2", "to": "q3" },
+          { "from": "q3", "to": "a5", "label": "YES" },
+          { "from": "q3", "to": "a3", "label": "NO" },
+          { "from": "a3", "to": "a5" },
+          { "from": "a5", "to": "q4" },
+          { "from": "q4", "to": "e1", "label": "YES" },
+          { "from": "q4", "to": "a4", "label": "NO" },
+          { "from": "a4", "to": "e1" }
+        ]
+      }
+    },
+    {
+      "level": 4,
+      "color": "#8b0000",
+      "textColor": "#ff6b6b",
+      "label": "RED",
+      "name": "Final Days (Oct-Nov 1972)",
+      "description": "Deadline approaching. Violence increasing. Thousands still waiting for transport. Military takeover of properties accelerating.",
+      "officialTrigger": "November deadline imminent. Extensions granted selectively. Threats of military action if people don't leave.",
+      "observableTrigger": "Entebbe airport processing 700+ people daily. Families camping at airport for days. Confiscations routine. Random arrests. Some disappear permanently.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "RED\nFinal Days"
+          },
+          {
+            "id": "q1",
+            "type": "decision",
+            "label": "Family at\nairport staging?"
+          },
+          {
+            "id": "q2",
+            "type": "decision",
+            "label": "Essential items\nonly?"
+          },
+          {
+            "id": "a1",
+            "type": "action",
+            "label": "Move to airport\narea NOW",
+            "checklist": [
+              "Do not wait for 'perfect' moment - go NOW",
+              "Women and children first if splitting up",
+              "Bring only what you can carry - one suitcase per person",
+              "Airport processing taking 12-48 hours - bring food, water, blankets",
+              "Airport conditions: no privacy, no sanitation, no safety guarantees",
+              "Stay together as family unit - separations often permanent",
+              "Soldiers at airport were unpredictable - extremely dangerous",
+              "Some families camped near airport for days waiting for flights",
+              "Do NOT leave airport once there - re-entry was often denied"
+            ]
+          },
+          {
+            "id": "a2",
+            "type": "action",
+            "label": "Strip down to\nbare essentials",
+            "checklist": [
+              "Passport, tickets, medical records only",
+              "One change of clothes per person",
+              "Medications for journey",
+              "Small amount of cash for bribes",
+              "Wedding photos, children's vaccination cards if space",
+              "Everything else: abandon it",
+              "Inspectors will confiscate: cameras, radios, jewelry, cash, electronics",
+              "Cavity searches common - hide nothing, risk is too high",
+              "Your life and family's safety - only things that matter now",
+              "Some hid valuables in clothing linings - if caught, consequences severe"
+            ]
+          },
+          {
+            "id": "a3",
+            "type": "action",
+            "label": "Airport survival\nprotocol",
+            "checklist": [
+              "Comply with all demands immediately - no exceptions",
+              "Do not argue, explain, or negotiate - just obey",
+              "Bribes: small amounts in local currency ready",
+              "Protection money: some soldiers demanded payment to 'protect' luggage",
+              "Sexual assault risk high - women stayed in groups when possible",
+              "Children: keep close at all times, teach them to be silent and invisible",
+              "Document checks happened multiple times - soldier would 'lose' papers and demand bribes",
+              "Witnesses report bodies at airport - some who resisted or fought back",
+              "If separated from family: go to High Commission area immediately",
+              "Once on plane, do not celebrate until airborne - planes have been stopped"
+            ]
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "EVACUATING\nGod be with you"
+          }
+        ],
+        "edges": [
+          { "from": "s1", "to": "q1" },
+          { "from": "q1", "to": "q2", "label": "YES" },
+          { "from": "q1", "to": "a1", "label": "NO" },
+          { "from": "a1", "to": "q2" },
+          { "from": "q2", "to": "a3", "label": "YES" },
+          { "from": "q2", "to": "a2", "label": "NO" },
+          { "from": "a2", "to": "a3" },
+          { "from": "a3", "to": "e1" }
+        ]
+      }
+    },
+    {
+      "level": 5,
+      "color": "#1a1a1a",
+      "textColor": "#666666",
+      "label": "BLACK",
+      "name": "Post-Deadline (Nov 8+)",
+      "description": "Deadline passed. Approximately 7,000 remained - stranded, stateless, or refusing to leave. Conditions deteriorated sharply.",
+      "officialTrigger": "November 8, 1972 deadline elapsed. Military began house-to-house searches. Detention camps established.",
+      "observableTrigger": "Shops shuttered. Businesses seized. Asian areas emptied. Those remaining lived in fear of arrest or worse. International pressure mounted but slowly.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "BLACK\nStranded"
+          },
+          {
+            "id": "q1",
+            "type": "decision",
+            "label": "Have valid\ntravel documents?"
+          },
+          {
+            "id": "q2",
+            "type": "decision",
+            "label": "Destination will\naccept you?"
+          },
+          {
+            "id": "a1",
+            "type": "action",
+            "label": "Emergency document\napplication",
+            "checklist": [
+              "UK issued emergency travel documents - but process slow and dangerous",
+              "Required multiple trips to High Commission through hostile military",
+              "Stateless individuals had no recourse - truly trapped",
+              "Red Cross intervened for some cases",
+              "UNHCR began processing but with limited capacity",
+              "Some countries (India, Pakistan) provided documents retrospectively",
+              "Documentation often 'lost' by officials demanding bribes"
+            ]
+          },
+          {
+            "id": "a2",
+            "type": "action",
+            "label": "Find refugee\npathway",
+            "checklist": [
+              "Canada announced special intake - several hundred accepted",
+              "UK under pressure reopened some cases",
+              "Some fled overland to Kenya - illegal but only option",
+              "Kenyan camps held some temporarily",
+              "UNHCR camps in Europe (Treviso, Italy) took small numbers",
+              "Religious organizations sponsored some families",
+              "Process could take months in dangerous conditions"
+            ]
+          },
+          {
+            "id": "a3",
+            "type": "action",
+            "label": "Survival mode",
+            "checklist": [
+              "Move frequently - staying in one place too dangerous",
+              "Rely on remaining community networks",
+              "Some hid with sympathetic African Ugandan friends - enormous risk for hosts",
+              "Bribery essential - maintain small cash reserve",
+              "Avoid all official contact if possible",
+              "No work, no income, depleting savings",
+              "Malnutrition became common",
+              "Mental health crises widespread",
+              "Some committed suicide",
+              "Children unable to attend school",
+              "Medical care virtually unavailable",
+              "This was not sustainable - merely surviving until escape possible"
+            ]
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "AWAIT\nINT'L INTERVENTION"
+          }
+        ],
+        "edges": [
+          { "from": "s1", "to": "q1" },
+          { "from": "q1", "to": "q2", "label": "YES" },
+          { "from": "q1", "to": "a1", "label": "NO" },
+          { "from": "a1", "to": "q2" },
+          { "from": "q2", "to": "a2", "label": "NO" },
+          { "from": "q2", "to": "a3", "label": "UNSURE" },
+          { "from": "a2", "to": "a3" },
+          { "from": "a3", "to": "e1" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "family-contacts",
+  "title": "Share Details with Family",
+  "description": "If something happens, your family needs to know where you are and how to reach you.",
+  "tags": ["essential", "communication", "family"],
+  "items": [
+    "Your home address in the Gulf",
+    "Your work address and employer name",
+    "Your local phone number",
+    "Indian embassy emergency number for your country",
+    "At least one trusted neighbor or colleague contact",
+    "Your bank account details and how to access if needed"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "your-scenario-id",
+  "label": "Short display name (e.g. 'Gulf Regional Conflict')",
+  "subtitle": "One line describing who this is for (e.g. 'Indian nationals in UAE / Saudi Arabia')",
+  "currentLevel": 1,
+  "disclaimer": "Your disclaimer here. Always include: NOT official guidance. Verify independently.",
+  "levels": [
+    {
+      "level": 1,
+      "color": "#1e5c1e",
+      "textColor": "#a8f0a8",
+      "label": "GREEN",
+      "name": "Normal",
+      "description": "Situation description at this level.",
+      "officialTrigger": "What official sources say that puts you at this level.",
+      "observableTrigger": "What you can see/hear/observe yourself that puts you at this level.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "GREEN\nNormal Status"
+          },
+          {
+            "id": "q1",
+            "type": "decision",
+            "label": "First decision\nto make?"
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "DONE\nOutcome description"
+          },
+          {
+            "id": "a1",
+            "type": "action",
+            "label": "Action to take",
+            "checklistId": "your-checklist-id"
+          },
+          {
+            "id": "a2",
+            "type": "action",
+            "label": "Inline checklist example",
+            "checklist": [
+              "Step 1 with specific detail",
+              "Step 2 with specific detail",
+              "Step 3 - cite sources where possible"
+            ]
+          }
+        ],
+        "edges": [
+          { "from": "s1", "to": "q1" },
+          { "from": "q1", "to": "e1", "label": "YES" },
+          { "from": "q1", "to": "a1", "label": "NO" },
+          { "from": "a1", "to": "e1" }
+        ]
+      }
+    }
+  ]
+}

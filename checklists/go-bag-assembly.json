@@ -1,0 +1,15 @@
+{
+  "id": "go-bag-assembly",
+  "title": "Assemble Go-Bag",
+  "description": "A prepared bag you can grab in 60 seconds if you need to evacuate immediately.",
+  "tags": ["emergency", "evacuation", "preparation"],
+  "items": [
+    "Passport and copies of all IDs",
+    "Cash - US dollars or Euros, not just local currency. At least $500.",
+    "Phone charger, power bank, charging cable",
+    "List of emergency contacts - printed, not just in phone",
+    "Any critical medication - 7 day supply minimum",
+    "One change of clothes",
+    "Keep this bag near your front door, not in a closet"
+  ]
+}

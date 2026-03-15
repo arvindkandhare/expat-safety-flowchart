@@ -1,0 +1,12 @@
+{
+  "id": "madad-registration",
+  "title": "Register on MADAD",
+  "description": "MADAD is the Ministry of External Affairs portal for Indian nationals abroad to register and receive consular assistance.",
+  "tags": ["gulf", "essential", "registration"],
+  "items": [
+    "Go to madad.gov.in",
+    "Create account with Indian mobile or email",
+    "Enter current Gulf country, city, employer name",
+    "Save login credentials somewhere offline"
+  ]
+}

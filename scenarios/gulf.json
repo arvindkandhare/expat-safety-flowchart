@@ -1,0 +1,964 @@
+{
+  "id": "gulf",
+  "label": "Gulf Regional Conflict",
+  "subtitle": "Indian nationals in UAE / Saudi Arabia / Kuwait / Qatar / Oman / Bahrain",
+  "currentLevel": 2,
+  "disclaimer": "Informational resource only. Compiled from MEA advisories and verified sources. NOT official government guidance. Verify all information at mea.gov.in before acting. Situation changes rapidly.",
+  "levels": [
+    {
+      "level": 1,
+      "color": "#1e5c1e",
+      "textColor": "#a8f0a8",
+      "label": "GREEN",
+      "name": "Normal",
+      "description": "No active advisory. Normal life. Do prep now - not during a crisis.",
+      "officialTrigger": "No MEA advisory. Flights operating normally. No travel warning above 'exercise normal precautions.'",
+      "observableTrigger": "Regional news tense but no conflict in your geography. Employer not discussing contingency. Shops, banks, government services operating normally.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "GREEN\nNormal Status"
+          },
+          {
+            "id": "q1",
+            "type": "decision",
+            "label": "MADAD\nregistered?"
+          },
+          {
+            "id": "q2",
+            "type": "decision",
+            "label": "Passport valid\n18+ months?"
+          },
+          {
+            "id": "q3",
+            "type": "decision",
+            "label": "Documents\ncopied & in cloud?"
+          },
+          {
+            "id": "q4",
+            "type": "decision",
+            "label": "Family has your\naddress & contacts?"
+          },
+          {
+            "id": "q5",
+            "type": "decision",
+            "label": "Check-in schedule\nagreed?"
+          },
+          {
+            "id": "q6",
+            "type": "decision",
+            "label": "Go-bag\nassembled?"
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "GREEN PREP\nCOMPLETE\nReview quarterly"
+          },
+          {
+            "id": "a1",
+            "type": "action",
+            "label": "Register on\nMADAD now",
+            "checklistId": "madad-registration"
+          },
+          {
+            "id": "a2",
+            "type": "action",
+            "label": "Renew passport\nimmediately",
+            "checklistId": "passport-renewal"
+          },
+          {
+            "id": "a3",
+            "type": "action",
+            "label": "Copy & store\nall documents",
+            "checklistId": "document-storage"
+          },
+          {
+            "id": "a4",
+            "type": "action",
+            "label": "Share details\nwith family",
+            "checklistId": "gulf-family-contacts-extended"
+          },
+          {
+            "id": "a5",
+            "type": "action",
+            "label": "Agree check-in\nprotocol",
+            "checklistId": "gulf-check-in-protocol"
+          },
+          {
+            "id": "a6",
+            "type": "action",
+            "label": "Assemble go-bag\n(locate, don't pack)",
+            "checklistId": "gulf-go-bag-locate"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "q1"
+          },
+          {
+            "from": "q1",
+            "to": "q2",
+            "label": "YES"
+          },
+          {
+            "from": "q1",
+            "to": "a1",
+            "label": "NO"
+          },
+          {
+            "from": "a1",
+            "to": "q2"
+          },
+          {
+            "from": "q2",
+            "to": "q3",
+            "label": "YES"
+          },
+          {
+            "from": "q2",
+            "to": "a2",
+            "label": "NO"
+          },
+          {
+            "from": "a2",
+            "to": "q3"
+          },
+          {
+            "from": "q3",
+            "to": "q4",
+            "label": "YES"
+          },
+          {
+            "from": "q3",
+            "to": "a3",
+            "label": "NO"
+          },
+          {
+            "from": "a3",
+            "to": "q4"
+          },
+          {
+            "from": "q4",
+            "to": "q5",
+            "label": "YES"
+          },
+          {
+            "from": "q4",
+            "to": "a4",
+            "label": "NO"
+          },
+          {
+            "from": "a4",
+            "to": "q5"
+          },
+          {
+            "from": "q5",
+            "to": "q6",
+            "label": "YES"
+          },
+          {
+            "from": "q5",
+            "to": "a5",
+            "label": "NO"
+          },
+          {
+            "from": "a5",
+            "to": "q6"
+          },
+          {
+            "from": "q6",
+            "to": "e1",
+            "label": "YES"
+          },
+          {
+            "from": "q6",
+            "to": "a6",
+            "label": "NO"
+          },
+          {
+            "from": "a6",
+            "to": "e1"
+          }
+        ]
+      }
+    },
+    {
+      "level": 2,
+      "color": "#6b5900",
+      "textColor": "#ffe87a",
+      "label": "YELLOW",
+      "name": "Watch",
+      "description": "Geopolitical tension elevated. No direct threat yet. Weeks available. Most people do nothing here and regret it.",
+      "officialTrigger": "MEA issues 'exercise caution' advisory. Embassy issues community notice. Any elevated travel warning for the region.",
+      "observableTrigger": "Any 2 of: Indian carrier reduces Gulf routes / Colleagues discussing contingency plans / Local govt issues preparedness communication / Mainstream news mentions military posturing / Insurance or bank asking about contingencies.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "YELLOW\nWatch Status"
+          },
+          {
+            "id": "q1",
+            "type": "decision",
+            "label": "GREEN prep\ncomplete?"
+          },
+          {
+            "id": "q2",
+            "type": "decision",
+            "label": "Passport valid\n12+ months?"
+          },
+          {
+            "id": "q3",
+            "type": "decision",
+            "label": "Go-bag packed\nand at door?"
+          },
+          {
+            "id": "q4",
+            "type": "decision",
+            "label": "Cash withdrawn?\n(2 weeks)"
+          },
+          {
+            "id": "q5",
+            "type": "decision",
+            "label": "Know your visa\nexit conditions?"
+          },
+          {
+            "id": "q6",
+            "type": "decision",
+            "label": "Checked flight\noptions to India?"
+          },
+          {
+            "id": "q7",
+            "type": "decision",
+            "label": "Family on\ndaily check-in?"
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "YELLOW PREP\nCOMPLETE\nMonitor daily"
+          },
+          {
+            "id": "a1",
+            "type": "action",
+            "label": "Complete GREEN\nprep first",
+            "checklist": [
+              "Return to GREEN level and complete all steps before continuing",
+              "MADAD registration is the most critical single action - do it now"
+            ]
+          },
+          {
+            "id": "a2",
+            "type": "action",
+            "label": "Renew urgently\ndo not wait",
+            "checklist": [
+              "Passport renewal during a crisis takes weeks you will not have",
+              "Visit embassy directly and request urgent processing",
+              "Ask employer for time off - this is a safety matter, not optional"
+            ]
+          },
+          {
+            "id": "a3",
+            "type": "action",
+            "label": "Pack go-bag now",
+            "checklist": [
+              "Passport and all document copies",
+              "2 weeks of essential medication - get extra prescription now, pharmacies close",
+              "Phone, charger, power bank - keep charged at all times from now",
+              "Local cash: 2 weeks of living expenses",
+              "USD 200-300 minimum for border crossings",
+              "One set of clothes",
+              "Written contact list on paper: embassy, family, MADAD, bank - phones die"
+            ]
+          },
+          {
+            "id": "a4",
+            "type": "action",
+            "label": "Withdraw cash\nATMs queue later",
+            "checklist": [
+              "Withdraw 2 weeks of expenses in local currency today",
+              "Get USD 200-300 from exchange - do not leave this for later",
+              "Check your bank's international transfer limits during emergencies",
+              "Consider transferring large savings to India now if comfortable doing so"
+            ]
+          },
+          {
+            "id": "a5",
+            "type": "action",
+            "label": "Know your\nlegal standing",
+            "checklist": [
+              "Does your visa require employer consent to exit? Kafala-system visas sometimes do.",
+              "Does your employment contract have a force majeure clause?",
+              "Does your employer hold your passport? Illegal in all Gulf states. Request return in writing NOW.",
+              "Ask HR directly about the company's emergency plan. If they don't have one, that is information."
+            ]
+          },
+          {
+            "id": "a6",
+            "type": "action",
+            "label": "Survey flight\noptions (don't book yet)",
+            "checklist": [
+              "Check Air India: airindia.com",
+              "Check IndiGo: indigo.in",
+              "Note which routes are still operating and which have been suspended",
+              "Note indirect routing options: Istanbul, Colombo, Amman, Cairo all viable",
+              "Screenshot current prices - if still low, consider booking a refundable fare"
+            ]
+          },
+          {
+            "id": "a7",
+            "type": "action",
+            "label": "Activate daily\ncommunication",
+            "checklist": [
+              "Move from weekly to daily check-in",
+              "Confirm primary contact in India has: your address, employer, local number, embassy number",
+              "Confirm they follow @MEAIndia on X/Twitter for official advisories",
+              "Single coordination person only - not everyone calling the embassy simultaneously"
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "q1"
+          },
+          {
+            "from": "q1",
+            "to": "q2",
+            "label": "YES"
+          },
+          {
+            "from": "q1",
+            "to": "a1",
+            "label": "NO"
+          },
+          {
+            "from": "a1",
+            "to": "q2"
+          },
+          {
+            "from": "q2",
+            "to": "q3",
+            "label": "YES"
+          },
+          {
+            "from": "q2",
+            "to": "a2",
+            "label": "NO"
+          },
+          {
+            "from": "a2",
+            "to": "q3"
+          },
+          {
+            "from": "q3",
+            "to": "q4",
+            "label": "YES"
+          },
+          {
+            "from": "q3",
+            "to": "a3",
+            "label": "NO"
+          },
+          {
+            "from": "a3",
+            "to": "q4"
+          },
+          {
+            "from": "q4",
+            "to": "q5",
+            "label": "YES"
+          },
+          {
+            "from": "q4",
+            "to": "a4",
+            "label": "NO"
+          },
+          {
+            "from": "a4",
+            "to": "q5"
+          },
+          {
+            "from": "q5",
+            "to": "q6",
+            "label": "YES"
+          },
+          {
+            "from": "q5",
+            "to": "a5",
+            "label": "NO"
+          },
+          {
+            "from": "a5",
+            "to": "q6"
+          },
+          {
+            "from": "q6",
+            "to": "q7",
+            "label": "YES"
+          },
+          {
+            "from": "q6",
+            "to": "a6",
+            "label": "NO"
+          },
+          {
+            "from": "a6",
+            "to": "q7"
+          },
+          {
+            "from": "q7",
+            "to": "e1",
+            "label": "YES"
+          },
+          {
+            "from": "q7",
+            "to": "a7",
+            "label": "NO"
+          },
+          {
+            "from": "a7",
+            "to": "e1"
+          }
+        ]
+      }
+    },
+    {
+      "level": 3,
+      "color": "#7a3200",
+      "textColor": "#ffbb80",
+      "label": "ORANGE",
+      "name": "Advisory",
+      "description": "Active conflict in region. Flights disrupting. Evacuation recommended. Hours to days available. Deliberation is over.",
+      "officialTrigger": "MEA recommends Indians consider departing or register urgently. Embassy activates repatriation flight registration. DGCA issues Gulf route directives.",
+      "observableTrigger": "Any 2 of: Multiple airlines suspend routes / Military activity visible or audible / Local govt issues curfew or shelter-in-place / Employer sends staff home / Shops showing shortages or fuel queues.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "ORANGE\nAdvisory Status"
+          },
+          {
+            "id": "q1",
+            "type": "decision",
+            "label": "Physically safe\nright now?"
+          },
+          {
+            "id": "q2",
+            "type": "decision",
+            "label": "Airspace open\nin your country?"
+          },
+          {
+            "id": "q3",
+            "type": "decision",
+            "label": "Flight to India\navailable < 24hrs?"
+          },
+          {
+            "id": "q4",
+            "type": "decision",
+            "label": "Overland route\nviable?"
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "DEPARTED\nNotify family\nUpdate MADAD"
+          },
+          {
+            "id": "e2",
+            "type": "end",
+            "label": "SHELTERING\nEmbassy knows\nyour location\nEscalate to RED\nif worsens"
+          },
+          {
+            "id": "a_red",
+            "type": "action",
+            "label": "Go to RED\nprotocol now",
+            "checklist": [
+              "You are in immediate danger - open RED level now",
+              "Shelter in place immediately",
+              "Call embassy 24x7 helpline and state your location"
+            ]
+          },
+          {
+            "id": "a_embassy",
+            "type": "action",
+            "label": "Call embassy\nNOW then book",
+            "checklist": [
+              "Not for general questions - to confirm registration and ask about chartered repatriation flights",
+              "Ask specifically: am I on the waitlist? When is the next chartered flight?",
+              "UAE: 800-46342 / Saudi: 800 247 1234 / Kuwait: +965 6550 1946",
+              "Qatar: +974 55647502 / Oman: 80071234 / Bahrain: +973 39418071"
+            ]
+          },
+          {
+            "id": "a_book",
+            "type": "action",
+            "label": "Book earliest\navailable seat",
+            "checklist": [
+              "Book now - even indirect routing via Istanbul, Colombo, Amman, Cairo",
+              "Do not wait for a direct route. Indirect is fine. Waiting is not.",
+              "Notify employer in writing that you are departing - WhatsApp to manager is sufficient",
+              "Withdraw any remaining cash NOW before ATM queues form",
+              "Transfer bank balance to India if possible",
+              "Charge all devices to 100%",
+              "Screenshot everything offline: contacts, booking, embassy numbers"
+            ]
+          },
+          {
+            "id": "a_overland",
+            "type": "action",
+            "label": "Identify overland\nroute by country",
+            "checklist": [
+              "KUWAIT: Al-Nuwaisib/Salwa crossing to Saudi. KSA visa required: visa.visitsaudi.com. Embassy buses may operate.",
+              "UAE: Buraimi or Hatta crossing to Oman. UAE airports also more resilient - verify first.",
+              "QATAR: Salwa border to Saudi. Peninsula - no other land exit. KSA visa required.",
+              "BAHRAIN: King Fahd Causeway to Saudi. ~25km to Khobar/Dammam.",
+              "SAUDI: Riyadh and Jeddah airports most stable. Proceed there.",
+              "OMAN: Muscat airport generally operational. Direct flights to India often available.",
+              "Fill fuel tank immediately - queues form fast. Take go-bag only, leave large luggage.",
+              "Expect border wait times of several hours. Stock water and food for the vehicle."
+            ]
+          },
+          {
+            "id": "a_shelter",
+            "type": "action",
+            "label": "Shelter in place\nand wait",
+            "checklist": [
+              "Stock 72 hours: water, food, essential medication",
+              "Interior room, away from all windows",
+              "Keep all devices charged",
+              "Contact embassy to register as awaiting evacuation - give them your exact location",
+              "Check in with family every 6 hours minimum",
+              "Monitor ONLY: embassy official website and @MEAIndia on X/Twitter",
+              "Do NOT act on WhatsApp forwards - this is where most harm comes from"
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "q1"
+          },
+          {
+            "from": "q1",
+            "to": "q2",
+            "label": "YES"
+          },
+          {
+            "from": "q1",
+            "to": "a_red",
+            "label": "NO - threat"
+          },
+          {
+            "from": "q2",
+            "to": "q3",
+            "label": "YES"
+          },
+          {
+            "from": "q2",
+            "to": "q4",
+            "label": "NO - closed"
+          },
+          {
+            "from": "q3",
+            "to": "a_embassy",
+            "label": "YES"
+          },
+          {
+            "from": "q3",
+            "to": "a_embassy",
+            "label": "PARTIAL"
+          },
+          {
+            "from": "a_embassy",
+            "to": "a_book"
+          },
+          {
+            "from": "a_book",
+            "to": "e1"
+          },
+          {
+            "from": "q4",
+            "to": "a_overland",
+            "label": "YES"
+          },
+          {
+            "from": "q4",
+            "to": "a_shelter",
+            "label": "NO - unsafe"
+          },
+          {
+            "from": "a_overland",
+            "to": "e1"
+          },
+          {
+            "from": "a_shelter",
+            "to": "e2"
+          }
+        ]
+      }
+    },
+    {
+      "level": 4,
+      "color": "#7a0000",
+      "textColor": "#ff9999",
+      "label": "RED",
+      "name": "Warning",
+      "description": "Direct threat. Active strikes nearby. Airspace closing. Immediate danger possible.",
+      "officialTrigger": "Embassy issues depart immediately or shelter-in-place directive. Airspace closed in your country. MEA activates emergency evacuation.",
+      "observableTrigger": "You can hear explosions or sirens. Streets emptying. ATMs being drained. Your building or area is targeted.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "RED\nWarning Status"
+          },
+          {
+            "id": "q1",
+            "type": "decision",
+            "label": "Active threat\nin your\nimmediate area?"
+          },
+          {
+            "id": "q2",
+            "type": "decision",
+            "label": "Documents\naccessible?"
+          },
+          {
+            "id": "q3",
+            "type": "decision",
+            "label": "Family in India\nknows you\nare in RED?"
+          },
+          {
+            "id": "q4",
+            "type": "decision",
+            "label": "Special\ncircumstance?"
+          },
+          {
+            "id": "q5",
+            "type": "decision",
+            "label": "Any exit\nroute viable?"
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "EXITING\nLow and fast\nNotify embassy\nof your route"
+          },
+          {
+            "id": "e2",
+            "type": "end",
+            "label": "HOLDING\nEmbassy has\nyour location\nAwait official\nevacuation"
+          },
+          {
+            "id": "a_shelter",
+            "type": "action",
+            "label": "SHELTER NOW\nimmediately",
+            "checklist": [
+              "Move to interior room immediately",
+              "Away from all windows - glass is the primary injury risk",
+              "Ground floor or basement preferred",
+              "Do NOT go outside during an active alert for any reason",
+              "Stay until all-clear from official source only - not WhatsApp"
+            ]
+          },
+          {
+            "id": "a_docs",
+            "type": "action",
+            "label": "Emergency\ndocuments",
+            "checklist": [
+              "Embassy issues Emergency Certificate of Identity if passport is lost or confiscated",
+              "Call embassy 24x7 line - you do not need a passport to contact them",
+              "If passport was confiscated by employer: state this explicitly - embassies have specific protocols"
+            ]
+          },
+          {
+            "id": "a_notify",
+            "type": "action",
+            "label": "Notify family\nand embassy",
+            "checklist": [
+              "One message to primary family contact: I am safe, I am at [location]",
+              "Call embassy 24x7 helpline - state you are in RED, give your exact address",
+              "Update MADAD status if possible: madad.gov.in",
+              "Then conserve phone battery - do not scroll news feeds"
+            ]
+          },
+          {
+            "id": "a_special",
+            "type": "action",
+            "label": "Special cases\nprotocol",
+            "checklist": [
+              "MEDICAL: local emergency first (UAE: 998 / Saudi: 911 / Kuwait: 112 / Qatar: 999 / Oman: 9999 / Bahrain: 999), then embassy",
+              "UNACCOMPANIED MINOR: state this immediately when calling embassy. Family in India: call MEA Control Room +91-11-23011954 now.",
+              "PASSPORT CONFISCATED: illegal in all Gulf states. Embassy issues Emergency ID. Do NOT confront employer alone.",
+              "DOMESTIC OR LABOUR WORKER: contact embassy welfare cell specifically - handles confiscated passports and employer disputes"
+            ]
+          },
+          {
+            "id": "a_exit",
+            "type": "action",
+            "label": "Exit options\nby country",
+            "checklist": [
+              "KUWAIT: Al-Nuwaisib/Salwa to Saudi. Embassy buses may operate. community.kuwait@mea.gov.in",
+              "UAE: Buraimi or Hatta to Oman. UAE airports also more resilient.",
+              "QATAR: Salwa border only land option. cons.doha@mea.gov.in",
+              "BAHRAIN: King Fahd Causeway to Khobar.",
+              "SAUDI: Riyadh and Jeddah airports most stable. cw.riyadh@mea.gov.in",
+              "OMAN: Muscat airport generally operational. cw.muscat@mea.gov.in"
+            ]
+          },
+          {
+            "id": "a_wait",
+            "type": "action",
+            "label": "Shelter and\nescalate",
+            "checklist": [
+              "Stock 72 hours of water, food, medication - ration if necessary",
+              "Keep devices charged - designate one phone for calls only",
+              "Call embassy every 12 hours if no update received",
+              "Monitor ONLY: embassy official website and @MEAIndia",
+              "Do NOT move based on WhatsApp information",
+              "Do NOT pay unofficial evacuation agents - use embassy channels only"
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "q1"
+          },
+          {
+            "from": "q1",
+            "to": "q2",
+            "label": "NO - safe"
+          },
+          {
+            "from": "q1",
+            "to": "a_shelter",
+            "label": "YES"
+          },
+          {
+            "from": "a_shelter",
+            "to": "q2"
+          },
+          {
+            "from": "q2",
+            "to": "q3",
+            "label": "YES"
+          },
+          {
+            "from": "q2",
+            "to": "a_docs",
+            "label": "NO/CONFISCATED"
+          },
+          {
+            "from": "a_docs",
+            "to": "q3"
+          },
+          {
+            "from": "q3",
+            "to": "q4",
+            "label": "YES"
+          },
+          {
+            "from": "q3",
+            "to": "a_notify",
+            "label": "NO"
+          },
+          {
+            "from": "a_notify",
+            "to": "q4"
+          },
+          {
+            "from": "q4",
+            "to": "q5",
+            "label": "NO"
+          },
+          {
+            "from": "q4",
+            "to": "a_special",
+            "label": "YES"
+          },
+          {
+            "from": "a_special",
+            "to": "q5"
+          },
+          {
+            "from": "q5",
+            "to": "a_exit",
+            "label": "POSSIBLY"
+          },
+          {
+            "from": "q5",
+            "to": "a_wait",
+            "label": "NO - unsafe"
+          },
+          {
+            "from": "a_exit",
+            "to": "e1"
+          },
+          {
+            "from": "a_wait",
+            "to": "e2"
+          }
+        ]
+      }
+    },
+    {
+      "level": 5,
+      "color": "#1a1a1a",
+      "textColor": "#aaaaaa",
+      "label": "BLACK",
+      "name": "Emergency",
+      "description": "Full airspace closure. Direct strikes on civilian infrastructure. Immediate life threat. Embassy may have suspended routine services.",
+      "officialTrigger": "Full airspace closure across multiple Gulf states. Embassy suspends routine services. Government-to-government evacuation only.",
+      "observableTrigger": "Explosions audible or visible from your location. Utilities disrupted. Embassy unreachable on normal lines. All commercial exit routes closed.",
+      "flow": {
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "start",
+            "label": "BLACK\nEmergency"
+          },
+          {
+            "id": "q1",
+            "type": "decision",
+            "label": "Physically\nunharmed?"
+          },
+          {
+            "id": "q2",
+            "type": "decision",
+            "label": "Current location\nstructurally safe?"
+          },
+          {
+            "id": "q3",
+            "type": "decision",
+            "label": "Embassy reachable\non emergency line?"
+          },
+          {
+            "id": "q4",
+            "type": "decision",
+            "label": "72-hour supplies\navailable?"
+          },
+          {
+            "id": "e1",
+            "type": "end",
+            "label": "HOLD POSITION\nEmbassy has\nyour location\nAwait official\nevacuation only"
+          },
+          {
+            "id": "a_medical",
+            "type": "action",
+            "label": "Medical\nemergency first",
+            "checklist": [
+              "UAE: 998 / Saudi Arabia: 911 / Kuwait: 112",
+              "Qatar: 999 / Oman: 9999 / Bahrain: 999",
+              "Do not move an injured person unless there is immediate further danger at the current location"
+            ]
+          },
+          {
+            "id": "a_relocate",
+            "type": "action",
+            "label": "Move to safer\nstructure",
+            "checklist": [
+              "Nearest concrete or reinforced building",
+              "Embassy or consulate compound if reachable and safe",
+              "Hotel with basement or ground-floor interior rooms",
+              "Do NOT cross open ground during an active alert",
+              "Move low, move fast, move once - do not go back for belongings"
+            ]
+          },
+          {
+            "id": "a_contact",
+            "type": "action",
+            "label": "Emergency\nembassy contact",
+            "checklist": [
+              "UAE: 800-46342 / WhatsApp +971 543090571",
+              "Saudi Arabia: 800 247 1234 / WhatsApp +966-542126748",
+              "Kuwait: +965 6550 1946",
+              "Qatar: +974 55647502",
+              "Oman: 80071234 / +968 98282270",
+              "Bahrain: +973 39418071",
+              "MEA Control Room from India: +91-11-23011954",
+              "WhatsApp often works when voice calls do not. SMS often works when data does not."
+            ]
+          },
+          {
+            "id": "a_supplies",
+            "type": "action",
+            "label": "Emergency\nsupply protocol",
+            "checklist": [
+              "Ration water: 2 litres minimum per person per day",
+              "Do not use gas appliances if there is structural damage nearby",
+              "All phones on low power mode except one designated for calls",
+              "If medication running low: state this when contacting embassy - medical supply is priority in evacuations",
+              "Keep everyone in the same room - do not split up"
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "q1"
+          },
+          {
+            "from": "q1",
+            "to": "q2",
+            "label": "YES"
+          },
+          {
+            "from": "q1",
+            "to": "a_medical",
+            "label": "NO - injured"
+          },
+          {
+            "from": "a_medical",
+            "to": "q2"
+          },
+          {
+            "from": "q2",
+            "to": "q3",
+            "label": "YES"
+          },
+          {
+            "from": "q2",
+            "to": "a_relocate",
+            "label": "NO - unsafe"
+          },
+          {
+            "from": "a_relocate",
+            "to": "q3"
+          },
+          {
+            "from": "q3",
+            "to": "q4",
+            "label": "YES"
+          },
+          {
+            "from": "q3",
+            "to": "a_contact",
+            "label": "NO - try now"
+          },
+          {
+            "from": "a_contact",
+            "to": "q4"
+          },
+          {
+            "from": "q4",
+            "to": "e1",
+            "label": "YES"
+          },
+          {
+            "from": "q4",
+            "to": "a_supplies",
+            "label": "NO"
+          },
+          {
+            "from": "a_supplies",
+            "to": "e1"
+          }
+        ]
+      }
+    }
+  ]
+}
