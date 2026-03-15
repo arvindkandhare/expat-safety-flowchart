@@ -747,12 +747,15 @@ function App() {
       style: {
         borderTop: "1px solid #141414", padding: "5px 20px",
         background: "#0a0a0a", display: "flex",
-        justifyContent: "space-between", flexShrink: 0
+        justifyContent: "space-between", alignItems: "center", flexShrink: 0, gap: 12, flexWrap: "wrap"
       }
     },
       React.createElement("span", {
         style: { fontSize: 8.5, color: "#2a2a2a" }
       }, "Tap solid-border nodes to expand checklist"),
+      React.createElement("span", {
+        style: { fontSize: 8.5, color: "#2a2a2a" }
+      }, "Privacy-friendly analytics via GoatCounter (no personal data)"),
       React.createElement("span", {
         style: { fontSize: 8.5, color: "#2a2a2a" }
       }, "Open source - contribute scenarios via GitHub PR")
