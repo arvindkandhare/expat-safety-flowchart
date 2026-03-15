@@ -412,10 +412,10 @@ function AboutModal({ onClose }) {
       },
         React.createElement("div", {
           style: { fontSize: 14, fontWeight: 700, color: "#e0e0e0", marginBottom: 12 }
-        }, "Crisis Preparedness Framework"),
+        }, "Crowdsourced Crisis Preparedness"),
         React.createElement("p", {
           style: { fontSize: 11, color: "#888", marginBottom: 16 }
-        }, "An open-source, community-maintained decision framework for Indian nationals abroad. Interactive flowcharts with five threat levels covering decision trees, action checklists, and guidance for both the person abroad and their support network in India."),
+        }, "A crowdsourced, open-source decision framework for Indian nationals abroad. Interactive flowcharts with five threat levels covering decision trees, action checklists, and guidance for both the person abroad and their support network in India."),
         React.createElement("div", {
           style: { fontSize: 10, color: "#555", marginBottom: 6, letterSpacing: 1 }
         }, "WHY IT EXISTS"),
@@ -589,7 +589,7 @@ function App() {
         React.createElement("div", null,
           React.createElement("div", {
             style: { fontSize: 9, letterSpacing: 3, color: "#444", marginBottom: 2 }
-          }, "CRISIS PREPAREDNESS FRAMEWORK"),
+          }, "CROWDSOURCED CRISIS PREPAREDNESS"),
           React.createElement("div", {
             style: { fontSize: 15, fontWeight: 700, color: "#e0e0e0" }
           }, "Indian Nationals Abroad")
@@ -615,6 +615,17 @@ function App() {
             React.createElement("option", { disabled: true }, "── contribute via GitHub PR ──")
           )
         ),
+        React.createElement("a", {
+          href: "https://github.com/arvindkandhare/expat-safety-flowchart",
+          target: "_blank",
+          rel: "noopener noreferrer",
+          style: {
+            background: "none", border: "1px solid #2a2a2a", color: "#6699cc",
+            padding: "5px 12px", borderRadius: 4, fontSize: 11,
+            fontFamily: "inherit", cursor: "pointer", letterSpacing: 1,
+            textDecoration: "none", display: "inline-block"
+          }
+        }, "CONTRIBUTE"),
         React.createElement("button", {
           onClick: () => setShowAbout(true),
           style: {

@@ -1,7 +1,7 @@
 # Crisis Preparedness Framework
 ### For Indian Nationals Abroad
 
-**An open-source, community-maintained decision framework. Scenarios for Gulf conflict, H1B visa crisis, and more.**
+**A crowdsourced, open-source decision framework. Community-maintained scenarios for Gulf conflict, H1B visa crisis, and more.**
 
 > **Live app:** [arvindkandhare.github.io/expat-safety-flowchart](https://arvindkandhare.github.io/expat-safety-flowchart)
 
